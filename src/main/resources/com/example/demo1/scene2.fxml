@@ -1,22 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?> <?import javafx.scene.control.Label?> <?import javafx.scene.control.RadioButton?> <?import javafx.scene.control.ToggleGroup?> <?import javafx.scene.layout.AnchorPane?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.control.ToggleGroup?>
-<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.scene2Controller">
-   <children>
-      <Label fx:id="name2" layoutX="72.0" layoutY="59.0" prefHeight="18.0" prefWidth="339.0" text="hello samia" />
-      <RadioButton fx:id="r" layoutX="72.0" layoutY="148.0" mnemonicParsing="false" onAction="#r" selected="true" text="RadioButton">
-         <toggleGroup>
-            <ToggleGroup fx:id="q" />
-         </toggleGroup></RadioButton>
-      <Label fx:id="l" layoutX="88.0" layoutY="191.0" />
-      <RadioButton fx:id="r1" layoutX="199.0" layoutY="157.0" mnemonicParsing="false" onAction="#r" selected="true" text="RadioButton" toggleGroup="$q" />
-      <RadioButton fx:id="r11" layoutX="300.0" layoutY="157.0" mnemonicParsing="false" onAction="#r" selected="true" text="RadioButton" toggleGroup="$q" />
-      <Label fx:id="email2" layoutX="73.0" layoutY="94.0" prefHeight="18.0" prefWidth="339.0" text="hello samia" />
-      <Label fx:id="dob2" layoutX="72.0" layoutY="112.0" prefHeight="18.0" prefWidth="339.0" text="hello samia" />
-      <Label fx:id="nationality2" layoutX="72.0" layoutY="130.0" prefHeight="18.0" prefWidth="339.0" text="hello samia" />
-   </children>
+<AnchorPane xmlns="http://javafx.com/javafx/25"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.demo1.scene2Controller"
+            prefHeight="600.0" prefWidth="800.0">
+    <children>
+        <Label fx:id="name2" layoutX="50" layoutY="40" style="-fx-font-size:18px; -fx-font-weight:bold;"/>
+        <Label fx:id="email2" layoutX="50" layoutY="70"/>
+        <Label fx:id="dob2" layoutX="50" layoutY="100"/>
+        <Label fx:id="nationality2" layoutX="50" layoutY="130"/>
+        <Label fx:id="education2" layoutX="50" layoutY="180"/>
+        <Label fx:id="skill2" layoutX="50" layoutY="220"/>
+        <Label fx:id="experience2" layoutX="50" layoutY="260"/>
+    </children>
 </AnchorPane>
+

@@ -5,22 +5,32 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.scene1Controller">
-   <children>
-      <TextField fx:id="namebutton" layoutX="248.0" layoutY="138.0">
+<AnchorPane xmlns="http://javafx.com/javafx/25"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.demo1.scene1Controller"
+            prefHeight="500.0" prefWidth="600.0">
+    <children>
+        <Label layoutX="166" layoutY="60" text="Name"/>
+        <TextField fx:id="namebutton" layoutX="248" layoutY="56"/>
 
-      </TextField>
-      <Button fx:id="login" layoutX="264.0" layoutY="360.0" mnemonicParsing="false" onAction="#login" text="login" />
-      <Label fx:id="name1" layoutX="166.0" layoutY="142.0" text="username" />
-      <Label fx:id="email" layoutX="166.0" layoutY="182.0" text="email" />
-      <TextField fx:id="emailbutton" layoutX="248.0" layoutY="178.0" />
-      <Label fx:id="dob1" layoutX="166.0" layoutY="214.0" text="date of birth" />
-      <Label fx:id="nationality1" layoutX="158.0" layoutY="243.0" text="nationality" />
-      <Label fx:id="name13" layoutX="166.0" layoutY="276.0" text="username" />
-      <Label fx:id="name14" layoutX="166.0" layoutY="303.0" text="username" />
-      <TextField fx:id="dobbutton" layoutX="248.0" layoutY="210.0" />
-      <TextField fx:id="nationalitybutton" layoutX="248.0" layoutY="239.0" />
-      <TextField fx:id="emailbutton3" layoutX="241.0" layoutY="272.0" />
-      <TextField fx:id="emailbutton4" layoutX="241.0" layoutY="299.0" />
-   </children>
+        <Label layoutX="166" layoutY="100" text="Email"/>
+        <TextField fx:id="emailbutton" layoutX="248" layoutY="96"/>
+
+        <Label layoutX="166" layoutY="140" text="Date of Birth"/>
+        <TextField fx:id="dobbutton" layoutX="248" layoutY="136"/>
+
+        <Label layoutX="166" layoutY="180" text="Nationality"/>
+        <TextField fx:id="nationalitybutton" layoutX="248" layoutY="176"/>
+
+        <Label layoutX="166" layoutY="220" text="Education"/>
+        <TextField fx:id="educationbutton" layoutX="248" layoutY="216" prefWidth="250"/>
+
+        <Label layoutX="166" layoutY="260" text="Skills"/>
+        <TextField fx:id="skillsbutton" layoutX="248" layoutY="256" prefWidth="250"/>
+
+        <Label layoutX="166" layoutY="300" text="Experience"/>
+        <TextField fx:id="experiencebutton" layoutX="248" layoutY="296" prefWidth="250"/>
+
+        <Button layoutX="264" layoutY="360" text="Login" onAction="#login"/>
+    </children>
 </AnchorPane>
