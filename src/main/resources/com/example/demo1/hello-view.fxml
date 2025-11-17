@@ -3,17 +3,63 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.paint.Color?>
 
-<VBox spacing="20" alignment="CENTER" xmlns="http://javafx.com/javafx"
-      xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.demo1.HelloController">
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.example.demo1.HelloController">
 
-    <padding><Insets top="40" bottom="40" left="30" right="30"/></padding>
+    <!-- Background Gradient -->
+    <Pane style="-fx-background-color: linear-gradient(to bottom right, #4CAF50, #2E7D32);" />
 
-    <Label text="Welcome to CV Builder" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+    <!-- Card Container -->
+    <VBox spacing="20" alignment="CENTER"
+          style="-fx-background-color: white;
+                 -fx-background-radius: 20;
+                 -fx-padding: 40 30;
+                 -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 20, 0.3, 0, 8);">
 
-    <TextArea editable="false" wrapText="true" prefWidth="400" prefHeight="100"
-              text="This application helps you create a professional Curriculum Vitae (CV). Click below to begin." />
+        <!-- Graphic Icon -->
+        <Circle radius="40" fill="#4CAF50"
+                style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 12, 0.3, 0, 3);" />
 
-    <Button text="Create New CV" onAction="#handleCreateCV" prefWidth="200"/>
+        <!-- Title Label with background + no border -->
+        <Label text="Welcome to CV Builder"
+               style="-fx-font-size: 26px;
+                      -fx-font-weight: bold;
+                      -fx-text-fill: white;
+                      -fx-padding: 12 30;
+                      -fx-background-color: #2E7D32;
+                      -fx-background-radius: 15;
+                      -fx-border-width: 0;" />
 
-</VBox>
+        <!-- Description box -->
+        <TextArea editable="false" wrapText="true" prefWidth="400" prefHeight="100"
+                  style="-fx-font-size: 14px;
+                         -fx-background-radius: 10;
+                         -fx-border-width: 0;
+                         -fx-control-inner-background: #F0F0F0;"
+                  text="This application helps you create a professional Curriculum Vitae (CV). Click below to begin." />
+
+        <!-- Button -->
+        <Button text="Create New CV" onAction="#handleCreateCV" prefWidth="200"
+                style="-fx-background-color: #4CAF50;
+                       -fx-text-fill: white;
+                       -fx-font-size: 16px;
+                       -fx-font-weight: bold;
+                       -fx-background-radius: 10;
+                       -fx-padding: 10 20;" />
+
+    </VBox>
+
+</StackPane>
+
+
+
+
+
+
+
+
+

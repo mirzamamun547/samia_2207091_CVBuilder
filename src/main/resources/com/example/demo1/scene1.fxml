@@ -6,54 +6,66 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="550.0" prefWidth="650.0"
+<AnchorPane prefHeight="650.0" prefWidth="650.0"
             xmlns="http://javafx.com/javafx/25"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.example.demo1.scene1Controller"
             style="-fx-background-color: linear-gradient(to bottom, #dcdcdc, #ffffff); -fx-padding: 20;">
 
     <children>
+
         <!-- Section Title -->
         <Label layoutX="40" layoutY="20" text="Personal Details"
                style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2a4d7d;"/>
 
-        <!-- Form Fields -->
+        <!-- Name -->
         <Label layoutX="40" layoutY="70" text="Name" style="-fx-font-weight: bold;"/>
-        <TextField fx:id="namebutton" layoutX="180" layoutY="65" prefWidth="300"
-                   style="-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-radius: 5;"/>
+        <TextField fx:id="namebutton" layoutX="180" layoutY="65" prefWidth="300"/>
 
+        <!-- Email -->
         <Label layoutX="40" layoutY="110" text="Email" style="-fx-font-weight: bold;"/>
-        <TextField fx:id="emailbutton" layoutX="180" layoutY="105" prefWidth="300"
-                   style="-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-radius: 5;"/>
+        <TextField fx:id="emailbutton" layoutX="180" layoutY="105" prefWidth="300"/>
 
-        <Label layoutX="40" layoutY="150" text="Date of Birth" style="-fx-font-weight: bold;"/>
-        <TextField fx:id="dobbutton" layoutX="180" layoutY="145" prefWidth="300"
-                   style="-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-radius: 5;"/>
+        <!-- Phone -->
+        <Label layoutX="40" layoutY="150" text="Phone Number" style="-fx-font-weight: bold;"/>
+        <TextField fx:id="phonebutton" layoutX="180" layoutY="145" prefWidth="300"/>
 
-        <Label layoutX="40" layoutY="190" text="Nationality" style="-fx-font-weight: bold;"/>
-        <TextField fx:id="nationalitybutton" layoutX="180" layoutY="185" prefWidth="300"
-                   style="-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-radius: 5;"/>
+        <!-- Address -->
+        <Label layoutX="40" layoutY="190" text="Address" style="-fx-font-weight: bold;"/>
+        <TextField fx:id="addressbutton" layoutX="180" layoutY="185" prefWidth="300"/>
 
-        <Label layoutX="40" layoutY="230" text="Education" style="-fx-font-weight: bold;"/>
-        <TextField fx:id="educationbutton" layoutX="180" layoutY="225" prefWidth="300"
-                   style="-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-radius: 5;"/>
+        <!-- DOB -->
+        <Label layoutX="40" layoutY="230" text="Date of Birth" style="-fx-font-weight: bold;"/>
+        <TextField fx:id="dobbutton" layoutX="180" layoutY="225" prefWidth="300"/>
 
-        <Label layoutX="40" layoutY="270" text="Skills" style="-fx-font-weight: bold;"/>
-        <TextField fx:id="skillsbutton" layoutX="180" layoutY="265" prefWidth="300"
-                   style="-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-radius: 5;"/>
+        <!-- Nationality -->
+        <Label layoutX="40" layoutY="270" text="Nationality" style="-fx-font-weight: bold;"/>
+        <TextField fx:id="nationalitybutton" layoutX="180" layoutY="265" prefWidth="300"/>
 
-        <Label layoutX="40" layoutY="310" text="Experience" style="-fx-font-weight: bold;"/>
-        <TextField fx:id="experiencebutton" layoutX="180" layoutY="305" prefWidth="300"
-                   style="-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-radius: 5;"/>
+        <!-- Education -->
+        <Label layoutX="40" layoutY="310" text="Education" style="-fx-font-weight: bold;"/>
+        <TextField fx:id="educationbutton" layoutX="180" layoutY="305" prefWidth="300"/>
+
+        <!-- Skills -->
+        <Label layoutX="40" layoutY="350" text="Skills" style="-fx-font-weight: bold;"/>
+        <TextField fx:id="skillsbutton" layoutX="180" layoutY="345" prefWidth="300"/>
+
+        <!-- Experience -->
+        <Label layoutX="40" layoutY="390" text="Experience" style="-fx-font-weight: bold;"/>
+        <TextField fx:id="experiencebutton" layoutX="180" layoutY="385" prefWidth="300"/>
+
+        <!-- Projects -->
+        <Label layoutX="40" layoutY="430" text="Projects" style="-fx-font-weight: bold;"/>
+        <TextField fx:id="projectbutton" layoutX="180" layoutY="425" prefWidth="300"/>
 
         <!-- Image Upload -->
-        <Button layoutX="40" layoutY="360" text="Add Photo (optional)" onAction="#handleImageUpload"
+        <Button layoutX="40" layoutY="470" text="Add Photo (optional)" onAction="#handleImageUpload"
                 style="-fx-background-color: #2a4d7d; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8;"/>
-        <ImageView fx:id="profileImage" layoutX="180" layoutY="350" fitWidth="100" fitHeight="100" preserveRatio="true"
+        <ImageView fx:id="profileImage" layoutX="180" layoutY="460" fitWidth="100" fitHeight="100" preserveRatio="true"
                    style="-fx-border-color: #999; -fx-border-width: 2; -fx-border-radius: 8; -fx-effect: dropshadow(gaussian, gray, 5, 0.5, 2, 2);"/>
 
-        <!-- Submit Button -->
-        <Button layoutX="250" layoutY="470" text="Generate CV" onAction="#login"
+        <!-- Submit -->
+        <Button layoutX="250" layoutY="580" text="Generate CV" onAction="#login"
                 style="-fx-background-color: #009966; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8;"/>
     </children>
 </AnchorPane>

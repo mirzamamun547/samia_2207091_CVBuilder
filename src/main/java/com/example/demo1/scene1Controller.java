@@ -22,6 +22,11 @@ public class scene1Controller {
     @FXML TextField nationalitybutton;
     @FXML TextField educationbutton;
     @FXML TextField skillsbutton;
+    @FXML TextField phonebutton;
+    @FXML TextField addressbutton;
+    @FXML TextField projectbutton;
+
+
 
     @FXML TextField experiencebutton;
 
@@ -50,7 +55,12 @@ public class scene1Controller {
         String dobname=dobbutton.getText();
         String nationalityname=nationalitybutton.getText();
         String educationname=educationbutton.getText();
+        String phonename=phonebutton.getText();
+        String addressname=addressbutton.getText();
+        String projectname=projectbutton.getText();
         String skillname=skillsbutton.getText();
+
+
         String experiencename=experiencebutton.getText();
 
 
@@ -63,6 +73,10 @@ public class scene1Controller {
         scene2Controller.displaynationality(nationalityname);
         scene2Controller.displayeducation(educationname);
         scene2Controller.displayskill(skillname);
+        scene2Controller.displayphone(phonename);
+        scene2Controller.displayaddress(addressname);
+        scene2Controller.displayproject(projectname);
+
         scene2Controller.displayexperience(experiencename);
 
 

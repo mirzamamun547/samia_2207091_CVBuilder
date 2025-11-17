@@ -27,7 +27,12 @@ public class scene2Controller {
     Label experience2;
     @FXML
     private Label l;
-
+    @FXML
+    Label phone2;
+    @FXML
+    Label address2;
+    @FXML
+    Label project2;
 
 
     public void displayname(String username) {
@@ -36,6 +41,12 @@ public class scene2Controller {
 
     public void displayemail(String username) {
         email2.setText("Email: " + username);
+    }
+    public void displayphone(String username) {
+        phone2.setText("Phone Number: " + username);
+    }
+    public void displayaddress(String username) {
+        address2.setText("Address: " + username);
     }
 
     public void displaydob(String username) {
@@ -56,6 +67,9 @@ public class scene2Controller {
 
     public void displayexperience(String username) {
         experience2.setText("Experience: " + username);
+    }
+    public void displayproject(String username) {
+        project2.setText("Projects: " + username);
     }
     public void displayImage(Image image) {
         profileImagePreview.setImage(image);

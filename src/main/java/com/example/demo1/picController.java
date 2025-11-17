@@ -18,12 +18,12 @@ public class picController {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Select Profile Image");
 
-        // Limit to image files
+
         fileChooser.getExtensionFilters().addAll(
                 new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.jpeg")
         );
 
-        // Show dialog
+
         File file = fileChooser.showOpenDialog(new Stage());
         if (file != null) {
             Image image = new Image(file.toURI().toString());
