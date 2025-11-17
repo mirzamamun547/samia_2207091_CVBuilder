@@ -7,8 +7,12 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 public class scene1Controller {
     @FXML TextField namebutton;
@@ -24,6 +28,22 @@ public class scene1Controller {
     private Stage stage;
     private Scene scene;
     private Parent root;
+    @FXML private ImageView profileImage;
+
+    @FXML
+    private void handleImageUpload() {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Select Profile Image");
+        fileChooser.getExtensionFilters().add(
+                new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.jpeg")
+        );
+
+        File file = fileChooser.showOpenDialog(new Stage());
+        if (file != null) {
+            Image image = new Image(file.toURI().toString());
+            profileImage.setImage(image);
+        }
+    }
     public void login(ActionEvent event) throws IOException {
         String hsername=namebutton.getText();
         String email1name=emailbutton.getText();
@@ -46,6 +66,10 @@ public class scene1Controller {
         scene2Controller.displayexperience(experiencename);
 
 
+        // Pass image if uploaded
+        if (profileImage.getImage() != null) {
+            scene2Controller.displayImage(profileImage.getImage());
+        }
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene); stage.show();

@@ -2,17 +2,21 @@ package com.example.demo1;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.shape.Circle;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 
 public class HelloController {
+
     @FXML
-    private Circle mycirb;
-   private double y;
-public  void up(ActionEvent event){
-    mycirb.setCenterX(y=-50);
-
-}
-
+    private void handleCreateCV(ActionEvent event) {
+        try {
+            Parent formRoot = FXMLLoader.load(getClass().getResource("scene1.fxml"));
+            Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(formRoot));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
