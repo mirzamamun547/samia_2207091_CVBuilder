@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.UpdateDeleteController">
+   <children>
+      <AnchorPane layoutX="186.0" layoutY="85.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <TextField fx:id="update1" layoutX="14.0" layoutY="46.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

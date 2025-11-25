@@ -18,16 +18,6 @@ public class scene1Controller {
 
     private db db = new db();
 
-
-
-
-
-
-
-
-
-
-
     @FXML TextField namebutton;
     @FXML TextField emailbutton;
 
@@ -38,8 +28,6 @@ public class scene1Controller {
     @FXML TextField phonebutton;
     @FXML TextField addressbutton;
     @FXML TextField projectbutton;
-
-
 
     @FXML TextField experiencebutton;
 
@@ -63,10 +51,49 @@ public class scene1Controller {
         }
     }
 
+    public void update(ActionEvent event) throws IOException {
+        db.updateData(
+                namebutton.getText(),
+                emailbutton.getText(),
+                phonebutton.getText(),
+                dobbutton.getText(),
+                addressbutton.getText(),
+                nationalitybutton.getText(),
+                skillsbutton.getText(),
+                educationbutton.getText(),
+                projectbutton.getText(),
+                experiencebutton.getText()
+        );
+        String hsername=namebutton.getText();
+        String email1name=emailbutton.getText();
+        String dobname=dobbutton.getText();
+        String nationalityname=nationalitybutton.getText();
+        String educationname=educationbutton.getText();
+        String phonename=phonebutton.getText();
+        String addressname=addressbutton.getText();
+        String projectname=projectbutton.getText();
+        String skillname=skillsbutton.getText();
+
+
+        String experiencename=experiencebutton.getText();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("UpdateDelete.fxml"));
+        root = loader.load();
+        UpdateDeleteController scene2Controller=loader.getController();
+        scene2Controller.displayname(hsername,email1name,dobname,nationalityname,educationname,phonename,addressname,projectname,skillname,experiencename);
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
+    }
 
 
 
-
+    public void delete(ActionEvent event) throws IOException {
+        db.deleteData(
+                namebutton.getText()
+        );
+    }
 
 
 
@@ -74,16 +101,21 @@ public class scene1Controller {
 
 
     public void login(ActionEvent event) throws IOException {
-        db.insertData(namebutton.getText(),emailbutton.getText(),phonebutton.getText(),dobbutton.getText());
-        db.updateData(
+        db.insertData(
                 namebutton.getText(),
                 emailbutton.getText(),
                 phonebutton.getText(),
-                dobbutton.getText()
+                dobbutton.getText(),
+                addressbutton.getText(),
+                nationalitybutton.getText(),
+                skillsbutton.getText(),
+                educationbutton.getText(),
+                projectbutton.getText(),
+                experiencebutton.getText()
         );
-        db.deleteData(
-                namebutton.getText()
-        );
+
+
+
 
         String hsername=namebutton.getText();
         String email1name=emailbutton.getText();
@@ -115,7 +147,7 @@ public class scene1Controller {
         scene2Controller.displayexperience(experiencename);
 
 
-        // Pass image if uploaded
+
         if (profileImage.getImage() != null) {
             scene2Controller.displayImage(profileImage.getImage());
         }
