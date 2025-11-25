@@ -75,6 +75,13 @@ public class scene1Controller {
 
     public void login(ActionEvent event) throws IOException {
         db.insertData(namebutton.getText(),emailbutton.getText(),phonebutton.getText(),dobbutton.getText());
+        db.updateData(
+                namebutton.getText(),
+                emailbutton.getText(),
+                phonebutton.getText(),
+                dobbutton.getText()
+        );
+
         String hsername=namebutton.getText();
         String email1name=emailbutton.getText();
         String dobname=dobbutton.getText();

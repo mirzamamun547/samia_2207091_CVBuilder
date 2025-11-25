@@ -56,5 +56,21 @@ public class db {
         }
     }
 
+public void updateData(String nam, String email, String phone, String dateofbirth) {
+        getConnection();
+    String query="update notes set email=?,phone=?,dateofbirth=? where nam=?";
+    try(PreparedStatement preparedStatement= connection.prepareStatement(query)) {
+
+        preparedStatement.setString(1, email);
+        preparedStatement.setString(2, phone);
+        preparedStatement.setString(3, dateofbirth);
+        preparedStatement.setString(4, nam);
+        preparedStatement.executeUpdate();
+        logger.info("updated");
+    }
+    catch (SQLException ex) {
+        logger.info("SQLException: " + ex.getMessage());
+    }
+}
 
 }
