@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
+    private db db=new db();
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
@@ -16,5 +17,6 @@ public class HelloApplication extends Application {
 
        stage.setScene(scene);
         stage.show();
+        db.getConnection();
     }
 }

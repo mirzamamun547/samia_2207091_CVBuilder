@@ -15,6 +15,19 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.IOException;
 public class scene1Controller {
+
+    private db db = new db();
+
+
+
+
+
+
+
+
+
+
+
     @FXML TextField namebutton;
     @FXML TextField emailbutton;
 
@@ -49,7 +62,19 @@ public class scene1Controller {
             profileImage.setImage(image);
         }
     }
+
+
+
+
+
+
+
+
+
+
+
     public void login(ActionEvent event) throws IOException {
+        db.insertData(namebutton.getText(),emailbutton.getText(),phonebutton.getText(),dobbutton.getText());
         String hsername=namebutton.getText();
         String email1name=emailbutton.getText();
         String dobname=dobbutton.getText();
