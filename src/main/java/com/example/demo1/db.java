@@ -55,7 +55,18 @@ public class db {
             logger.info("SQLException: " + ex.getMessage());
         }
     }
-
+public void deleteData(String nam) {
+        getConnection();
+        String query="DELETE FROM notes WHERE nam=?";
+        try(PreparedStatement preparedStatement= connection.prepareStatement(query)) {
+            preparedStatement.setString(1, nam);
+          preparedStatement.executeUpdate();
+            logger.info("Deleted");
+        }
+        catch (SQLException ex) {
+            logger.info("SQLException: " + ex.getMessage());
+        }
+}
 public void updateData(String nam, String email, String phone, String dateofbirth) {
         getConnection();
     String query="update notes set email=?,phone=?,dateofbirth=? where nam=?";

@@ -81,6 +81,9 @@ public class scene1Controller {
                 phonebutton.getText(),
                 dobbutton.getText()
         );
+        db.deleteData(
+                namebutton.getText()
+        );
 
         String hsername=namebutton.getText();
         String email1name=emailbutton.getText();
